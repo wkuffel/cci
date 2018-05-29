@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: echo "A first hello"
-      - run: sleep 10
+      - run: sleep 11
       - checkout
   two:
     docker:
