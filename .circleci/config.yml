@@ -14,9 +14,31 @@ jobs:
     steps:
       - checkout
       - run: echo "A more familiar hello too"
+  three:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "A more familiar hello too3"
+  four:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "A more familiar hello too4"
+  five:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "A more familiar hello too5"    
+   
 workflows:
   version: 2
   one_and_two:
     jobs:
       - one
       - two
+      - three
+      - four
+      - five
