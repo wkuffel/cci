@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: echo "A first hello"
-      - run: sleep 11
+      - run: sleep 12
       - checkout
   two:
     docker:
@@ -14,24 +14,28 @@ jobs:
     steps:
       - checkout
       - run: echo "A more familiar hello too"
+      - run: sleep 11
   three:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "A more familiar hello too3"
+      - run: sleep 11
   four:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "A more familiar hello too4"
+      - run: sleep 11
   five:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "A more familiar hello too5"    
+      - run: echo "A more familiar hello too5"
+      - run: sleep 11
    
 workflows:
   version: 2
